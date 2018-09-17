@@ -35,7 +35,7 @@
 /* toggleBtn */
 #toggleBtn {
   /* float: right; */
-  color: black;
+  color: white;
   position: fixed;
   z-index: 2;
   top: 12px;
@@ -82,7 +82,8 @@
   }
 
 #header {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  background-color: rgb(36, 36, 36);
   text-align: center;
   padding: 10px;
   font-size: 20px;
@@ -113,6 +114,10 @@
     display: block;
     height: 100px;
   } */
+
+.indent {
+  margin-left: 40px;
+}
 
 #footer {
   position: fixed;
