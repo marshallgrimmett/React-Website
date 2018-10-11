@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
+import logo from './images/android-chrome-192x192.png';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -11,6 +12,7 @@ import About from './components/about.js';
 import Skills from './components/skills.js';
 // import Portfolio from './components/portfolio.js';
 import Contact from './components/contact.js';
+import PersistedConnectedRouter from './persisted';
 
 
 export default class App extends Component {
@@ -61,7 +63,7 @@ export default class App extends Component {
           </p> */}
 
           <header id="header">
-            <Link to="/"><img className="logo" alt="M" src="./android-chrome-192x192.png" /></Link>
+            <Link to="/"><img className="logo" alt="M" src={logo} /></Link>
             <a onClick={this.toggleNav} id="toggleBtn">
               {/* <i id="togBtnIcon" className="fa fa-chevron-left"></i> */}
               <i id="leftIcon" className="fa fa-chevron-left"></i>
@@ -70,7 +72,7 @@ export default class App extends Component {
           </header>
           
           <nav id="sideNav">
-            <Link to="/"><img className="logo" alt="M" src="./android-chrome-192x192.png" /></Link>
+            <Link to="/"><img className="logo" alt="M" src={logo} /></Link>
             <Link to="/" onClick={this.toggleNav}>Home</Link>
             <Link to="/about" onClick={this.toggleNav}>About</Link>
             <Link to="/skills" onClick={this.toggleNav}>Skills</Link>
@@ -102,3 +104,17 @@ export default class App extends Component {
     );
   }
 }
+
+
+// // Detects if device is on iOS 
+// const isIos = () => {
+//   const userAgent = window.navigator.userAgent.toLowerCase();
+//   return /iphone|ipad|ipod/.test( userAgent );
+// }
+// // Detects if device is in standalone mode
+// const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+// // Checks if should display install popup notification:
+// if (isIos() && !isInStandaloneMode()) {
+//   this.setState({ showInstallMessage: true });
+// }
